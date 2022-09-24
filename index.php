@@ -50,7 +50,7 @@ echo "<script>window.location.href='index.php'</script>";
             <th>Patient ID</th>
             <!-- <th>Age</th> -->
             <!-- <th>Gender</th> -->
-            <!-- <th>Addres</th> -->
+            <th>details</th>
             <th>Edit</th>
             <th>Delete</th>
         </thead>
@@ -71,11 +71,11 @@ echo "<script>window.location.href='index.php'</script>";
             <tr>
             <td><?php echo htmlentities($result->name);?></td>
             <td><?php echo htmlentities($result->id);?></td>
-            <!-- <td><?php echo htmlentities($result->gender);?> </td> -->
+            <td><a href="view.php?view=<?php echo htmlentities($result->id);?>"><button class="btn btn-primary btn-xs " style="font-size:16px;">view</button></a></td>
             <!-- <td><?php echo htmlentities($result->gender);?></td> -->
             <!-- <td><?php echo htmlentities($result->address);?></td> -->
-            <td><a href="update.php?id=<?php echo htmlentities($result->id);?>"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></a></td>
-            <td><a href="index.php?del=<?php echo htmlentities($result->id);?>"><button class="btn btn-danger btn-xs" onClick="return confirm('Do you really want to delete');"><span class="glyphicon glyphicon-trash"></span></button></a></td>
+            <td><a href="update.php?id=<?php echo htmlentities($result->id);?>"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil" style="font-size:16px;"></span></button></a></td>
+            <td><a href="index.php?del=<?php echo htmlentities($result->id);?>"><button class="btn btn-danger btn-xs " onClick="return confirm('Do you really want to delete');"><span class="glyphicon glyphicon-trash" style="font-size:16px;"></span></button></a></td>
             </tr>
         <?php 
         } ?>
